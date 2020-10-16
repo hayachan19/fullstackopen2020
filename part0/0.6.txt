@@ -1,0 +1,20 @@
+note over browser
+user presses the
+Submit button
+end note
+browser->server: (AJAX) HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server
+server consumes data
+included in the request
+end note
+server-->browser: 201 Created
+note over browser
+on success browser
+reloads updated notes
+end note
+browser->server: (AJAX) HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: notes
+note over browser
+notes are dynamically
+inserted into page
+end note

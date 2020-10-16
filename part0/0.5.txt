@@ -1,0 +1,16 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: index.html
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note over browser
+code sends request for
+notes on page load
+end note
+browser->server: (AJAX) HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: notes
+note over browser
+notes are dynamically
+inserted into page
+end note

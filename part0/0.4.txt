@@ -1,0 +1,16 @@
+note over browser
+user presses
+Submit button
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note over server
+server consumes data included in the request
+and responds with Location header
+end note
+server-->browser: Location: /notes
+note over browser
+browser is redirected
+to the same page
+with updated notes
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
